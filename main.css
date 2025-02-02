@@ -7,22 +7,22 @@ body {
     font-family: Tahoma, Arial;
 }
 
-div.menu {
+nav.menu {
     width: 100%;
     background-color: #4d5791;
     height: 44px;
     padding: 0 40px;
 }
 
-div.menu ul,
-div.menu ul li {
+nav.menu ul,
+nav.menu ul li {
     margin: 0;
     padding: 0 ;
     list-style: none;
     display: inline-block;
 }
 
-div.menu ul li a {
+nav.menu ul li a {
     display: block;
     padding: 0 20px;
     line-height: 44px;
@@ -32,12 +32,33 @@ div.menu ul li a {
     margin: 0;
 }
 
-div.menu ul li a:hover  {
+nav.menu ul li a:hover  {
     background-color: white;
     color: #4d5791;
 }
 
-div.hero {
+.new-tab{
+    
+}
+
+.skip-main {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    opacity: 0;
+    background-color: #fff;
+    color: #000000;
+    font-size: 1.5em;   
+    padding: 20px;  
+  }
+
+.skip-main:focus {
+    top: 10px;
+    left: 10px;
+    opacity: 1;
+}
+
+header.hero {
     height: 350px;
     background-color: #b4c6f0;
     background-image: url('/bg.png');
@@ -47,20 +68,25 @@ div.hero {
     padding-top: 40px;
 }
 
-div.hero h1,
-div.hero h2 {
+header.hero h1,
+header.hero h2 {
     text-align: center;
     margin: 0;
 }
 
-div.hero h1 {
+header.hero h1 {
     color: #fff;
     font-size: 4.2em;
     margin-bottom: 20px;
 }
 
-div.hero h2 {
+header.hero h2 {
     color: #4d5791;
+}
+header.hero img {
+    display: block;
+    margin: 0 auto;
+    width: 15%;
 }
 
 .container {
@@ -68,12 +94,24 @@ div.hero h2 {
     width: 100%;
 }
 
-.page-area {
+article.page-area {
     max-width: 768px;
     display: inline-block;
 }
 
-.bottom {
+article.page-area h3 {
+    font-size: 2.4em;
+}
+
+article.page-area a{
+    text-decoration: underline;
+    color: #4d5791;
+}
+article section.text-box p{
+    font-size: 1.5em;
+}
+
+footer.bottom {
     height: 50px;
     background-color: #b4c6f0;
     padding: 40px;
@@ -83,7 +121,7 @@ div.hero h2 {
     text-align: center;
 }
 
-.container div.text-box {
+.container section.text-box {
     display: inline-block;
     width: 100%;
     max-width: 340px;
@@ -92,7 +130,7 @@ div.hero h2 {
 }
 
 @media screen and (min-width: 768px) {
-    .container .div.text-box {
+    .container section.text-box {
         margin: 10px;
     }
 }
