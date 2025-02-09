@@ -128,6 +128,14 @@ footer.bottom {
     text-align: justify;
     margin: 20px;
 }
+#d3jsChart {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 768px;
+    height: 500px;
+    text-align: center;
+}
 
 @media screen and (min-width: 768px) {
     .container section.text-box {
