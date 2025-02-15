@@ -149,6 +149,9 @@
             fill: none;
         }
     </style>
+    <script src="http://localhost:3000/axios.min.js"></script>
+    <script src="http://localhost:3000/Chart.bundle.js"></script>
+    <script src="http://localhost:3000/d3.v3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" integrity="sha512-v8+bPcpk4Sj7CKB11+gK/FnsbgQ15jTwZamnBf/xDmiQDcgOIYufBo6Acu1y30vrk8gg5su4x0CG3zfPaq5Fcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js" integrity="sha512-G8JE1Xbr0egZE5gNGyUm1fF764iHVfRXshIoUWCTPAbKkkItp/6qal5YAHXrxEu4HNfPTQs6HOu3D5vCGS1j3w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
     <script src="http://d3js.org/d3.v3.min.js"></script>   
@@ -179,7 +182,7 @@
             });
         }
         function getBudget() {
-            axios.get('/budget')
+            axios.get('http://localhost:3000/budget')
             .then(function (res) {
                 console.log(res);
                 for (var i= 0; i < res.data.myBudget.length; i++){
@@ -193,7 +196,7 @@
     </script>
     <script>
     let datamap = {};
-    axios.get('/budget')
+    axios.get('http://localhost:3000/budget')
     .then(function (res) {
         for (var i= 0; i < res.data.myBudget.length; i++){
             datamap[res.data.myBudget[i].title] = res.data.myBudget[i].budget;
